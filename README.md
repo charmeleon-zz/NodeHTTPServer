@@ -3,6 +3,9 @@ NodeHTTPServer
 
 An HTTP (RFC2616) Server written using Node.js
 
+## Requirements
+node.js v0.8.14
+
 ## Usage
 node server.js
 
