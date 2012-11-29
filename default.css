@@ -1,0 +1,8 @@
+body {background: red;}
+h1 {color: white;
+width: 500px; height: 50px; white-space: nowrap;
+overflow: hidden; overflow-x: -webkit-marquee;
+-webkit-marquee-direction: forwards; -webkit-marquee-style: scroll; -webkit-marquee-speed: fast; -webkit-marquee-increment: small; -webkit-marquee-repetition: 25;
+overflow-x: marquee-line;
+marquee-direction: forward; marquee-style: scroll; marquee-speed: fast; marquee-play-count: 25;}
+
