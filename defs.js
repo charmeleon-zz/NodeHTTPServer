@@ -55,15 +55,26 @@ getContentType = function(ext) {
       return "text/plain";
     case "xml":
       return "text/xml";
-    case "mpg": case "mpeg": case "mp1": case"mp2": case "mp3": case "m1v": 
-      case "m1a": case "m2a": case "mpa": case "mpv":
+    case "mpg": case "mpeg": case "mp1": case"mp2": case "mp3":
+    case "m1v": case "m1a": case "m2a": case "mpa": case "mpv":
       return "video/mpeg";
-    case "mp4": case "m4a": case "m4p": case "m4b": case "m4r": case "m4v":
+    case "mp4": case "m4a": case "m4p":
+    case "m4b": case "m4r": case "m4v":
       return "video/mp4";
     case "flv": case "f4v": case "f4p": case "f4a": case "f4b":
       return "video/x-flv";
+    case "wav": case "wave":
+      return "audio/wav";
     default:
       return "application/octet-stream";
   }
+}
+
+getResponseStatus = function(code){
+  return " " + code.toString() + " " + STATUS_PHRASE[code] + "\r\n";
+}
+
+endsWith = function(needle, haystack){
+  return haystack.slice(haystack.length - needle.length, needle.length) == needle;
 }
 
